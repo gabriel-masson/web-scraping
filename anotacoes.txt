@@ -1,0 +1,12 @@
+O scrapy é "framework" de web scrapy pois ele automatiza muitas coisas na estrutura do projeto
+
+Aqui iniciamos o projeto
+scrapy startproject coleta
+
+Aqui criamos a nossa classe principal, no qual, será executada para extrair os dados
+scrapy genspider mercadilivre https://lista.mercadolivre.com.br/tenis-corrida-masculino
+
+Alguns sites impedem que o boot realize o web scraping, por isso definimos nosso USER_AGENT (no arquivo settings.py) para garantir que consigamos extrair nossos dados com eficiencia
+
+
+Executamos nosso arquivo usando scrapy crawl mercadolivre -o data.json
